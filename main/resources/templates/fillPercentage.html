@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapełnienie grupy</title>
+</head>
+<body>
+
+<h2>Zapełnienie grupy</h2>
+
+<p th:text="${classTeacher.nazwa_grupy}"></p>
+<p th:text="'obecny rozmiar grupy: ' + ${classTeacher.nauczyciele.size()}"></p>
+<p th:text="'maksymalny rozmiar: ' + ${classTeacher.liczba_nauczycieli}"></p>
+<p th:text="'Zapełnienie grupy: ' + ${fillPercentage} + '%'"></p>
+
+</body>
+</html>

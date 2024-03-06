@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>PostTeacher</title>
+</head>
+<body>
+<h1>PostTeacher</h1>
+<form action="/addTeacher" method="post">
+    <input type="text" name="imie"placeholder="imie">
+    <input type="text" name="surname"  placeholder="nazwisko">
+    <select name="text">
+        <option value="Obecny">+</option>
+        <option value="Delegacja">-</option>
+        <option value="Chory">*</option>
+        <option value="Nieobecny">/</option>
+    </select>
+    <input type="number" name="rok" placeholder="rok urodzenia">
+    <input type="number" name="wynagrodzenie" placeholder="wynagrodzenie">
+    <button type="submit">cals</button>
+</form>
+</body>
+</html>

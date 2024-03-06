@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuń Nauczyciela</title>
+</head>
+<body>
+
+<h2>Usuń Nauczyciela</h2>
+
+<form id="deleteForm" action="/api/teacher/" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="submit">Usuń Nauczyciela</button>
+</form>
+
+<script>
+  document.getElementById("deleteForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    fetch(event.target.action, {
+      method: "DELETE"
+    }).then(response => {
+      if (response.ok) {
+        alert("Nauczyciel został usunięty.");
+      } else {
+        alert("Wystąpił błąd podczas usuwania nauczyciela.");
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

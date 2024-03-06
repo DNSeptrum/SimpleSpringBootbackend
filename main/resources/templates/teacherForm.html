@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wpisz ID grupy nauczycielskiej</title>
+</head>
+<body>
+
+<form action="/api/classteacher/teacher" method="post">
+    <label for="id">Wpisz ID grupy nauczycielskiej:</label>
+    <input type="text" id="id" name="id" required>
+    <button type="submit">Submit</button>
+</form>
+<div th:if="${error}">
+    <p th:text="${error}" style="color: red;"></p>
+</div>
+</body>
+</html>

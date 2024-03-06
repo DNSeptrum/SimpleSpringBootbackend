@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj nauczyciela do klasy</title>
+</head>
+<body>
+
+<h2>Dodaj nauczyciela do klasy</h2>
+
+<form action="/api/classteacher/{id}" method="post">
+    <input type="number" name="classid" th:value="${classTeacher.id}">
+
+    <label for="nauczycieleid">Select Teacher:</label>
+    <select id="nauczycieleid" name="nauczycieleid" required>
+        <option th:each="teacher : ${teachers}" th:value="${teacher.id}" th:text="${teacher.imie + ' ' + teacher.nazwisko}"></option>
+    </select>
+
+    <br>
+
+    <button type="submit">Add Teacher to Class</button>
+</form>
+
+</body>
+</html>

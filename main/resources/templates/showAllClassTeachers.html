@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupy nauczycielskie</title>
+</head>
+<body>
+
+<h2>Grupy nauczycielskie</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nazwa Grupy</th>
+        <th>Liczba Nauczycieli</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="classTeacher : ${classTeachers}">
+        <td th:text="${classTeacher.id}"></td>
+        <td th:text="${classTeacher.nazwa_grupy}"></td>
+        <td th:text="${classTeacher.liczba_nauczycieli}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

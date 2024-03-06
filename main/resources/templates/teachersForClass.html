@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nauczyciele w danej klasie</title>
+</head>
+<body>
+
+<h2>Nauczyciele w danej klasie</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <!-- Dodaj dodatkowe kolumny w zależności od potrzeb -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="teacher : ${classTeacher.nauczyciele}">
+        <td th:text="${teacher.id}"></td>
+        <td th:text="${teacher.imie}"></td>
+        <td th:text="${teacher.nazwisko}"></td>
+        <!-- Dodaj dodatkowe kolumny w zależności od potrzeb -->
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
